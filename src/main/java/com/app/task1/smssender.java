@@ -18,7 +18,7 @@ public class smssender {
 //		client= (AmazonSNSClient) AmazonSNSClientBuilder.standard().withRegion(Regions.AP_SOUTH_1).build();
 //		client.publish("arn:aws:sns:ap-south-1:170811126574:mailservice", "hey hi sent by sns email", "snsemail");
 //		
-	BasicAWSCredentials cred=new BasicAWSCredentials("AKIAI5GEM5WM36OBNGJA", "CBG2o2NvfeT0/p8EYiy/Ud6NHT9ctzG/5d/7REdG");
+	BasicAWSCredentials cred=new BasicAWSCredentials("AKIAI5GEMXXXX6OBNGJA", "CBG2o2NvXXXXX8EYiy/Ud6NHT9ctzG/5d/7REdG");
 	 AmazonSNS sns=new AmazonSNSClient().
 			 builder().
 			 withRegion(Regions.AP_SOUTHEAST_2).
@@ -26,7 +26,7 @@ public class smssender {
 			 build();
 	 
 	 String msg="hello from amazon sns by srikanth";
-	 String mno="+919493752730";
+	 String mno="+91949XXXX730";
 	 
 	 sns.publish(new PublishRequest().withMessage(msg).withPhoneNumber(mno));
 	}
