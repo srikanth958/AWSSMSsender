@@ -14,7 +14,7 @@ public class smssender {
 	public static AmazonSNSClient client=null;
 	public static void main(String[] args) {
 		
-		
+		//below to lines used send email notification
 //		client= (AmazonSNSClient) AmazonSNSClientBuilder.standard().withRegion(Regions.AP_SOUTH_1).build();
 //		client.publish("arn:aws:sns:ap-south-1:170811126574:mailservice", "hey hi sent by sns email", "snsemail");
 //		
@@ -24,10 +24,11 @@ public class smssender {
 			 withRegion(Regions.AP_SOUTHEAST_2).
 			 withCredentials(new AWSStaticCredentialsProvider(cred)).
 			 build();
-	 
+	 //message to be sent
 	 String msg="hello from amazon sns by srikanth";
+	//Mobile number to which message will be sent
 	 String mno="+91949XXXX730";
-	 
+	 //sending sms 
 	 sns.publish(new PublishRequest().withMessage(msg).withPhoneNumber(mno));
 	}
 
